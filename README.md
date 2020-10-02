@@ -10,6 +10,8 @@ This repository contains a bunch of CMake scripts for legacy yet widely used sof
 * Windows 10 - gcc, clang, MSVC
 * Linux - gcc, clang
 
+>Note: Windows is primarily tested with clang and MSVC
+
 ## Instructions:
 ``` 
 cd to `package`
@@ -27,3 +29,5 @@ Build, Test and Install
 2) Few of the packages make use of gnulib. To build and install gnulib refer here https://github.com/SibiSiddharthan/gnulib_with_cmake.
 3) Many of the CMake scripts make use of the helper scrpits located in the cmake subfolder.
 4) If a package has specific instructions refer to the README.md in its subfolder if it exists.
+5) The libiconv subfolder contains the script for building libiconv only, iconv.exe is not built since it depends on libintl.
+prepare.py for libintl downloads the source code for the entire gettext package, but builds only libintl. To build iconv.exe use the separate folder iconv.

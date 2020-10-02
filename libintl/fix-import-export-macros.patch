@@ -9,12 +9,14 @@ index 6fb1920..8d7c49c 100644
 +#ifdef _WIN32
 +# ifdef BUILDING_LIBINTL
 +#  define LIBINTL_API __declspec(dllexport)
++#  define LIBINTL_DLL_EXPORTED LIBINTL_API
 +# else
 +#  define LIBINTL_API __declspec(dllimport)
 +# endif
 +#else
 +# if @HAVE_VISIBILITY@ && BUILDING_LIBINTL
 +#  define LIBINTL_API __attribute__((__visibility__("default")))
++#  define LIBINTL_DLL_EXPORTED LIBINTL_API
 +# else
 +#  define LIBINTL_API
 +# endif

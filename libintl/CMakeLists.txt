@@ -577,8 +577,8 @@ add_library(intl ${intl_SOURCES})
 target_compile_definitions(intl PRIVATE ENABLE_RELOCATABLE=1 IN_LIBRARY LOCALEDIR="" LOCALE_ALIAS_PATH=""
 						NO_XMALLOC BUILDING_LIBINTL IN_LIBINTL IN_LIBRARY set_relocation_prefix=libintl_set_relocation_prefix
 						relocate=libintl_relocate relocate2=libintl_relocate2 DEPENDS_ON_LIBICONV=1)
-target_include_directories(intl PRIVATE gettext-runtime/gnulib-lib gettext-runtime/intl ${CMAKE_CURRENT_BINARY_DIR}/gettext-runtime ${Iconv_INCLUDE_DIRS})
-target_link_libraries(intl ${Iconv_LIBRARIES})
+target_include_directories(intl PRIVATE gettext-runtime/gnulib-lib gettext-runtime/intl ${CMAKE_CURRENT_BINARY_DIR}/gettext-runtime)
+target_link_libraries(intl Iconv::Iconv)
 if(NOT MSVC)
 	target_compile_options(intl PRIVATE -fvisibility=hidden)
 endif()
