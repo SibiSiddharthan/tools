@@ -1,0 +1,3 @@
+## DEPENDS
+* libiconv
+* libintl

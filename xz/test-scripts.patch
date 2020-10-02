@@ -1,0 +1,106 @@
+diff --git a/test_compress.sh b/test_compress.sh.in
+index 62da0f9..2ba6538 100644
+--- a/test_compress.sh
++++ b/test_compress.sh.in
+@@ -9,14 +9,6 @@
+ #
+ ###############################################################################
+ 
+-# If xz wasn't built, this test is skipped.
+-if test -x ../src/xz/xz ; then
+-	:
+-else
+-	(exit 77)
+-	exit 77
+-fi
+-
+ # Find out if our shell supports functions.
+ eval 'unset foo ; foo() { return 42; } ; foo'
+ if test $? != 42 ; then
+@@ -74,9 +66,9 @@ test_xz() {
+ 	echo . | tr -d '\n\r'
+ }
+ 
+-XZ="../src/xz/xz --memlimit-compress=48MiB --memlimit-decompress=5MiB \
++XZ="@CMAKE_CURRENT_BINARY_DIR@/xz@CMAKE_EXECUTABLE_SUFFIX@ --memlimit-compress=48MiB --memlimit-decompress=5MiB \
+ 		--no-adjust --threads=1 --check=crc64"
+-XZDEC="../src/xzdec/xzdec" # No memory usage limiter available
++XZDEC="@CMAKE_CURRENT_BINARY_DIR@/xzdec@CMAKE_EXECUTABLE_SUFFIX@" # No memory usage limiter available
+ test -x ../src/xzdec/xzdec || XZDEC=
+ 
+ # Create the required input files.
+@@ -96,7 +88,7 @@ trap 'rm -f tmp_compressed tmp_uncompressed' 0
+ # Compress and decompress each file with various filter configurations.
+ # This takes quite a bit of time.
+ echo "test_compress.sh:"
+-for FILE in compress_generated_* "$srcdir"/compress_prepared_*
++for FILE in compress_generated_* @CMAKE_CURRENT_SOURCE_DIR@/tests/compress_prepared_*
+ do
+ 	MSG=`echo "x$FILE" | sed 's,^x,,; s,^.*/,,; s,^compress_,,'`
+ 	echo "  $MSG" | tr -d '\n\r'
+
+
+diff --git a/test_files.sh b/test_files.sh.in
+index 0f8a64d..d750237 100644
+--- a/test_files.sh
++++ b/test_files.sh.in
+@@ -10,8 +10,8 @@
+ ###############################################################################
+ 
+ # If both xz and xzdec were not build, skip this test.
+-XZ=../src/xz/xz
+-XZDEC=../src/xzdec/xzdec
++XZ=@CMAKE_CURRENT_BINARY_DIR@/xz@CMAKE_EXECUTABLE_SUFFIX@
++XZDEC=@CMAKE_CURRENT_BINARY_DIR@/xzdec@CMAKE_EXECUTABLE_SUFFIX@
+ test -x "$XZ" || XZ=
+ test -x "$XZDEC" || XZDEC=
+ if test -z "$XZ$XZDEC"; then
+@@ -19,7 +19,7 @@ if test -z "$XZ$XZDEC"; then
+ 	exit 77
+ fi
+ 
+-for I in "$srcdir"/files/good-*.xz
++for I in @CMAKE_CURRENT_SOURCE_DIR@/tests/files/good-*.xz
+ do
+ 	if test -z "$XZ" || "$XZ" -dc "$I" > /dev/null; then
+ 		:
+@@ -38,7 +38,7 @@ do
+ 	fi
+ done
+ 
+-for I in "$srcdir"/files/bad-*.xz
++for I in @CMAKE_CURRENT_SOURCE_DIR@/tests/files/bad-*.xz
+ do
+ 	if test -n "$XZ" && "$XZ" -dc "$I" > /dev/null 2>&1; then
+ 		echo "Bad file succeeded: $I"
+
+
+diff --git a/test_scripts.sh b/test_scripts.sh.in
+index 48a9308..773bbf7 100644
+--- a/test_scripts.sh
++++ b/test_scripts.sh.in
+@@ -10,9 +10,9 @@
+ ###############################################################################
+ 
+ # If scripts weren't built, this test is skipped.
+-XZ=../src/xz/xz
+-XZDIFF=../src/scripts/xzdiff
+-XZGREP=../src/scripts/xzgrep
++XZ=@CMAKE_CURRENT_BINARY_DIR@/xz@CMAKE_EXECUTABLE_SUFFIX@
++XZDIFF=@CMAKE_CURRENT_BINARY_DIR@/xzdiff
++XZGREP=@CMAKE_CURRENT_BINARY_DIR@/xzgrep
+ 
+ for i in XZ XZDIFF XZGREP; do
+ 	eval test -x "\$$i" && continue
+@@ -20,10 +20,7 @@ for i in XZ XZDIFF XZGREP; do
+ 	exit 77
+ done
+ 
+-PATH=`pwd`/../src/xz:$PATH
+-export PATH
+-
+-test -z "$srcdir" && srcdir=.
++srcdir=@CMAKE_CURRENT_SOURCE_DIR@/tests
+ preimage=$srcdir/files/good-1-check-crc32.xz
+ samepostimage=$srcdir/files/good-1-check-crc64.xz
+ otherpostimage=$srcdir/files/good-1-lzma2-1.xz

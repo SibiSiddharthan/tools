@@ -1,0 +1,11 @@
+#ifndef COMAPT_SYS_TIME_H
+#define COMAPT_SYS_TIME_H
+
+typedef struct timeval {
+    long tv_sec;
+    long tv_usec;
+} timeval;
+
+int gettimeofday(struct timeval * tp, void *restrict tz);
+#endif
+

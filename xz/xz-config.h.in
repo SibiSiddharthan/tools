@@ -1,0 +1,570 @@
+/* config.h.in.  Generated from configure.ac by autoheader.  */
+
+/* Define if building universal (internal helper macro) */
+#cmakedefine AC_APPLE_UNIVERSAL_BUILD @AC_APPLE_UNIVERSAL_BUILD@
+
+/* How many MiB of RAM to assume if the real amount cannot be determined. */
+#cmakedefine ASSUME_RAM @ASSUME_RAM@
+
+/* Define to 1 if translation of program messages to the user's native
+   language is requested. */
+#cmakedefine ENABLE_NLS @ENABLE_NLS@
+
+/* Define to 1 if bswap_16 is available. */
+#cmakedefine HAVE_BSWAP_16 @HAVE_BSWAP_16@
+
+/* Define to 1 if bswap_32 is available. */
+#cmakedefine HAVE_BSWAP_32 @HAVE_BSWAP_32@
+
+/* Define to 1 if bswap_64 is available. */
+#cmakedefine HAVE_BSWAP_64 @HAVE_BSWAP_64@
+
+/* Define to 1 if you have the <byteswap.h> header file. */
+#cmakedefine HAVE_BYTESWAP_H @HAVE_BYTESWAP_H@
+
+/* Define to 1 if Capsicum is available. */
+#cmakedefine HAVE_CAPSICUM @HAVE_CAPSICUM@
+
+/* Define to 1 if the system has the type `CC_SHA256_CTX'. */
+#cmakedefine HAVE_CC_SHA256_CTX @HAVE_CC_SHA256_CTX@
+
+/* Define to 1 if you have the `CC_SHA256_Init' function. */
+#cmakedefine HAVE_CC_SHA256_INIT @HAVE_CC_SHA256_INIT@
+
+/* Define to 1 if you have the Mac OS X function CFLocaleCopyCurrent in the
+   CoreFoundation framework. */
+#cmakedefine HAVE_CFLOCALECOPYCURRENT @HAVE_CFLOCALECOPYCURRENT@
+
+/* Define to 1 if you have the Mac OS X function
+   CFLocaleCopyPreferredLanguages in the CoreFoundation framework. */
+#cmakedefine HAVE_CFLOCALECOPYPREFERREDLANGUAGES @HAVE_CFLOCALECOPYPREFERREDLANGUAGES@
+
+/* Define to 1 if you have the Mac OS X function CFPreferencesCopyAppValue in
+   the CoreFoundation framework. */
+#cmakedefine HAVE_CFPREFERENCESCOPYAPPVALUE @HAVE_CFPREFERENCESCOPYAPPVALUE@
+
+/* Define to 1 if crc32 integrity check is enabled. */
+#cmakedefine HAVE_CHECK_CRC32 @HAVE_CHECK_CRC32@
+
+/* Define to 1 if crc64 integrity check is enabled. */
+#cmakedefine HAVE_CHECK_CRC64 @HAVE_CHECK_CRC64@
+
+/* Define to 1 if sha256 integrity check is enabled. */
+#cmakedefine HAVE_CHECK_SHA256 @HAVE_CHECK_SHA256@
+
+/* Define to 1 if you have the `clock_gettime' function. */
+#cmakedefine HAVE_CLOCK_GETTIME @HAVE_CLOCK_GETTIME@
+
+/* Define to 1 if you have the <CommonCrypto/CommonDigest.h> header file. */
+#cmakedefine HAVE_COMMONCRYPTO_COMMONDIGEST_H @HAVE_COMMONCRYPTO_COMMONDIGEST_H@
+
+/* Define if the GNU dcgettext() function is already present or preinstalled.
+   */
+#cmakedefine HAVE_DCGETTEXT @HAVE_DCGETTEXT@
+
+/* Define to 1 if you have the declaration of `CLOCK_MONOTONIC', and to 0 if
+   you don't. */
+#cmakedefine01 HAVE_DECL_CLOCK_MONOTONIC
+
+/* Define to 1 if you have the declaration of `program_invocation_name', and
+   to 0 if you don't. */
+#cmakedefine01 HAVE_DECL_PROGRAM_INVOCATION_NAME
+
+/* Define to 1 if any of HAVE_DECODER_foo have been defined. */
+#cmakedefine HAVE_DECODERS @HAVE_DECODERS@
+
+/* Define to 1 if arm decoder is enabled. */
+#cmakedefine HAVE_DECODER_ARM @HAVE_DECODER_ARM@
+
+/* Define to 1 if armthumb decoder is enabled. */
+#cmakedefine HAVE_DECODER_ARMTHUMB @HAVE_DECODER_ARMTHUMB@
+
+/* Define to 1 if delta decoder is enabled. */
+#cmakedefine HAVE_DECODER_DELTA @HAVE_DECODER_DELTA@
+
+/* Define to 1 if ia64 decoder is enabled. */
+#cmakedefine HAVE_DECODER_IA64 @HAVE_DECODER_IA64@
+
+/* Define to 1 if lzma1 decoder is enabled. */
+#cmakedefine HAVE_DECODER_LZMA1 @HAVE_DECODER_LZMA1@
+
+/* Define to 1 if lzma2 decoder is enabled. */
+#cmakedefine HAVE_DECODER_LZMA2 @HAVE_DECODER_LZMA2@
+
+/* Define to 1 if powerpc decoder is enabled. */
+#cmakedefine HAVE_DECODER_POWERPC @HAVE_DECODER_POWERPC@
+
+/* Define to 1 if sparc decoder is enabled. */
+#cmakedefine HAVE_DECODER_SPARC @HAVE_DECODER_SPARC@
+
+/* Define to 1 if x86 decoder is enabled. */
+#cmakedefine HAVE_DECODER_X86 @HAVE_DECODER_X86@
+
+/* Define to 1 if you have the <dlfcn.h> header file. */
+#cmakedefine HAVE_DLFCN_H @HAVE_DLFCN_H@
+
+/* Define to 1 if any of HAVE_ENCODER_foo have been defined. */
+#cmakedefine HAVE_ENCODERS @HAVE_ENCODERS@
+
+/* Define to 1 if arm encoder is enabled. */
+#cmakedefine HAVE_ENCODER_ARM @HAVE_ENCODER_ARM@
+
+/* Define to 1 if armthumb encoder is enabled. */
+#cmakedefine HAVE_ENCODER_ARMTHUMB @HAVE_ENCODER_ARMTHUMB@
+
+/* Define to 1 if delta encoder is enabled. */
+#cmakedefine HAVE_ENCODER_DELTA @HAVE_ENCODER_DELTA@
+
+/* Define to 1 if ia64 encoder is enabled. */
+#cmakedefine HAVE_ENCODER_IA64 @HAVE_ENCODER_IA64@
+
+/* Define to 1 if lzma1 encoder is enabled. */
+#cmakedefine HAVE_ENCODER_LZMA1 @HAVE_ENCODER_LZMA1@
+
+/* Define to 1 if lzma2 encoder is enabled. */
+#cmakedefine HAVE_ENCODER_LZMA2 @HAVE_ENCODER_LZMA2@
+
+/* Define to 1 if powerpc encoder is enabled. */
+#cmakedefine HAVE_ENCODER_POWERPC @HAVE_ENCODER_POWERPC@
+
+/* Define to 1 if sparc encoder is enabled. */
+#cmakedefine HAVE_ENCODER_SPARC @HAVE_ENCODER_SPARC@
+
+/* Define to 1 if x86 encoder is enabled. */
+#cmakedefine HAVE_ENCODER_X86 @HAVE_ENCODER_X86@
+
+/* Define to 1 if you have the <fcntl.h> header file. */
+#cmakedefine HAVE_FCNTL_H @HAVE_FCNTL_H@
+
+/* Define to 1 if you have the `futimens' function. */
+#cmakedefine HAVE_FUTIMENS @HAVE_FUTIMENS@
+
+/* Define to 1 if you have the `futimes' function. */
+#cmakedefine HAVE_FUTIMES @HAVE_FUTIMES@
+
+/* Define to 1 if you have the `futimesat' function. */
+#cmakedefine HAVE_FUTIMESAT @HAVE_FUTIMESAT@
+
+/* Define to 1 if you have the <getopt.h> header file. */
+#cmakedefine HAVE_GETOPT_H @HAVE_GETOPT_H@
+
+/* Define to 1 if you have the `getopt_long' function. */
+#cmakedefine HAVE_GETOPT_LONG @HAVE_GETOPT_LONG@
+
+/* Define if the GNU gettext() function is already present or preinstalled. */
+#cmakedefine HAVE_GETTEXT @HAVE_GETTEXT@
+
+/* Define if you have the iconv() function and it works. */
+#cmakedefine HAVE_ICONV @HAVE_ICONV@
+
+/* Define to 1 if you have the <immintrin.h> header file. */
+#cmakedefine HAVE_IMMINTRIN_H @HAVE_IMMINTRIN_H@
+
+/* Define to 1 if you have the <inttypes.h> header file. */
+#cmakedefine HAVE_INTTYPES_H @HAVE_INTTYPES_H@
+
+/* Define to 1 if you have the <limits.h> header file. */
+#cmakedefine HAVE_LIMITS_H @HAVE_LIMITS_H@
+
+/* Define to 1 if mbrtowc and mbstate_t are properly declared. */
+#cmakedefine HAVE_MBRTOWC @HAVE_MBRTOWC@
+
+/* Define to 1 if you have the <memory.h> header file. */
+#cmakedefine HAVE_MEMORY_H @HAVE_MEMORY_H@
+
+/* Define to 1 to enable bt2 match finder. */
+#cmakedefine HAVE_MF_BT2 @HAVE_MF_BT2@
+
+/* Define to 1 to enable bt3 match finder. */
+#cmakedefine HAVE_MF_BT3 @HAVE_MF_BT3@
+
+/* Define to 1 to enable bt4 match finder. */
+#cmakedefine HAVE_MF_BT4 @HAVE_MF_BT4@
+
+/* Define to 1 to enable hc3 match finder. */
+#cmakedefine HAVE_MF_HC3 @HAVE_MF_HC3@
+
+/* Define to 1 to enable hc4 match finder. */
+#cmakedefine HAVE_MF_HC4 @HAVE_MF_HC4@
+
+/* Define to 1 if getopt.h declares extern int optreset. */
+#cmakedefine HAVE_OPTRESET @HAVE_OPTRESET@
+
+/* Define to 1 if you have the `posix_fadvise' function. */
+#cmakedefine HAVE_POSIX_FADVISE @HAVE_POSIX_FADVISE@
+
+/* Define to 1 if you have the `pthread_condattr_setclock' function. */
+#cmakedefine HAVE_PTHREAD_CONDATTR_SETCLOCK @HAVE_PTHREAD_CONDATTR_SETCLOCK@
+
+/* Have PTHREAD_PRIO_INHERIT. */
+#cmakedefine HAVE_PTHREAD_PRIO_INHERIT @HAVE_PTHREAD_PRIO_INHERIT@
+
+/* Define to 1 if you have the `SHA256Init' function. */
+#cmakedefine HAVE_SHA256INIT @HAVE_SHA256INIT@
+
+/* Define to 1 if the system has the type `SHA256_CTX'. */
+#cmakedefine HAVE_SHA256_CTX @HAVE_SHA256_CTX@
+
+/* Define to 1 if you have the <sha256.h> header file. */
+#cmakedefine HAVE_SHA256_H @HAVE_SHA256_H@
+
+/* Define to 1 if you have the `SHA256_Init' function. */
+#cmakedefine HAVE_SHA256_INIT @HAVE_SHA256_INIT@
+
+/* Define to 1 if the system has the type `SHA2_CTX'. */
+#cmakedefine HAVE_SHA2_CTX @HAVE_SHA2_CTX@
+
+/* Define to 1 if you have the <sha2.h> header file. */
+#cmakedefine HAVE_SHA2_H @HAVE_SHA2_H@
+
+/* Define to 1 if optimizing for size. */
+#cmakedefine HAVE_SMALL @HAVE_SMALL@
+
+/* Define to 1 if stdbool.h conforms to C99. */
+#cmakedefine HAVE_STDBOOL_H @HAVE_STDBOOL_H@
+
+/* Define to 1 if you have the <stdint.h> header file. */
+#cmakedefine HAVE_STDINT_H @HAVE_STDINT_H@
+
+/* Define to 1 if you have the <stdlib.h> header file. */
+#cmakedefine HAVE_STDLIB_H @HAVE_STDLIB_H@
+
+/* Define to 1 if you have the <strings.h> header file. */
+#cmakedefine HAVE_STRINGS_H @HAVE_STRINGS_H@
+
+/* Define to 1 if you have the <string.h> header file. */
+#cmakedefine HAVE_STRING_H @HAVE_STRING_H@
+
+/* Define to 1 if `st_atimensec' is a member of `struct stat'. */
+#cmakedefine HAVE_STRUCT_STAT_ST_ATIMENSEC @HAVE_STRUCT_STAT_ST_ATIMENSEC@
+
+/* Define to 1 if `st_atimespec.tv_nsec' is a member of `struct stat'. */
+#cmakedefine HAVE_STRUCT_STAT_ST_ATIMESPEC_TV_NSEC @HAVE_STRUCT_STAT_ST_ATIMESPEC_TV_NSEC@
+
+/* Define to 1 if `st_atim.st__tim.tv_nsec' is a member of `struct stat'. */
+#cmakedefine HAVE_STRUCT_STAT_ST_ATIM_ST__TIM_TV_NSEC @HAVE_STRUCT_STAT_ST_ATIM_ST__TIM_TV_NSEC@
+
+/* Define to 1 if `st_atim.tv_nsec' is a member of `struct stat'. */
+#cmakedefine HAVE_STRUCT_STAT_ST_ATIM_TV_NSEC @HAVE_STRUCT_STAT_ST_ATIM_TV_NSEC@
+
+/* Define to 1 if `st_uatime' is a member of `struct stat'. */
+#cmakedefine HAVE_STRUCT_STAT_ST_UATIME @HAVE_STRUCT_STAT_ST_UATIME@
+
+/* Define to 1 if you have the <sys/byteorder.h> header file. */
+#cmakedefine HAVE_SYS_BYTEORDER_H @HAVE_SYS_BYTEORDER_H@
+
+/* Define to 1 if you have the <sys/capsicum.h> header file. */
+#cmakedefine HAVE_SYS_CAPSICUM_H @HAVE_SYS_CAPSICUM_H@
+
+/* Define to 1 if you have the <sys/endian.h> header file. */
+#cmakedefine HAVE_SYS_ENDIAN_H @HAVE_SYS_ENDIAN_H@
+
+/* Define to 1 if you have the <sys/param.h> header file. */
+#cmakedefine HAVE_SYS_PARAM_H @HAVE_SYS_PARAM_H@
+
+/* Define to 1 if you have the <sys/stat.h> header file. */
+#cmakedefine HAVE_SYS_STAT_H @HAVE_SYS_STAT_H@
+
+/* Define to 1 if you have the <sys/time.h> header file. */
+#cmakedefine HAVE_SYS_TIME_H @HAVE_SYS_TIME_H@
+
+/* Define to 1 if you have the <sys/types.h> header file. */
+#cmakedefine HAVE_SYS_TYPES_H @HAVE_SYS_TYPES_H@
+
+/* Define to 1 if the system has the type `uintptr_t'. */
+#cmakedefine HAVE_UINTPTR_T @HAVE_UINTPTR_T@
+
+/* Define to 1 if you have the <unistd.h> header file. */
+#cmakedefine HAVE_UNISTD_H @HAVE_UNISTD_H@
+
+/* Define to 1 if you have the `utime' function. */
+#cmakedefine HAVE_UTIME @HAVE_UTIME@
+
+/* Define to 1 if you have the `utimes' function. */
+#cmakedefine HAVE_UTIMES @HAVE_UTIMES@
+
+/* Define to 1 or 0, depending whether the compiler supports simple visibility
+   declarations. */
+#cmakedefine HAVE_VISIBILITY @HAVE_VISIBILITY@
+
+/* Define to 1 if you have the `wcwidth' function. */
+#cmakedefine HAVE_WCWIDTH @HAVE_WCWIDTH@
+
+/* Define to 1 if the system has the type `_Bool'. */
+#cmakedefine HAVE__BOOL @HAVE__BOOL@
+
+/* Define to 1 if you have the `_futime' function. */
+#cmakedefine HAVE__FUTIME @HAVE__FUTIME@
+
+/* Define to 1 if _mm_movemask_epi8 is available. */
+#cmakedefine HAVE__MM_MOVEMASK_EPI8 @HAVE__MM_MOVEMASK_EPI8@
+
+/* Define to 1 if the GNU C extension __builtin_assume_aligned is supported.
+   */
+#cmakedefine HAVE___BUILTIN_ASSUME_ALIGNED @HAVE___BUILTIN_ASSUME_ALIGNED@
+
+/* Define to 1 if the GNU C extensions __builtin_bswap16/32/64 are supported.
+   */
+#cmakedefine HAVE___BUILTIN_BSWAPXX @HAVE___BUILTIN_BSWAPXX@
+
+/* Define to the sub-directory where libtool stores uninstalled libraries. */
+#cmakedefine LT_OBJDIR @LT_OBJDIR@
+
+/* Define to 1 when using POSIX threads (pthreads). */
+#cmakedefine MYTHREAD_POSIX @MYTHREAD_POSIX@
+
+/* Define to 1 when using Windows Vista compatible threads. This uses features
+   that are not available on Windows XP. */
+#cmakedefine MYTHREAD_VISTA @MYTHREAD_VISTA@
+
+/* Define to 1 when using Windows 95 (and thus XP) compatible threads. This
+   avoids use of features that were added in Windows Vista. */
+#cmakedefine MYTHREAD_WIN95 @MYTHREAD_WIN95@
+
+/* Define to 1 to disable debugging code. */
+#cmakedefine NDEBUG @NDEBUG@
+
+/* Name of package */
+#cmakedefine PACKAGE @PACKAGE@
+
+/* Define to the address where bug reports for this package should be sent. */
+#cmakedefine PACKAGE_BUGREPORT @PACKAGE_BUGREPORT@
+
+/* Define to the full name of this package. */
+#cmakedefine PACKAGE_NAME @PACKAGE_NAME@
+
+/* Define to the full name and version of this package. */
+#cmakedefine PACKAGE_STRING @PACKAGE_STRING@
+
+/* Define to the one symbol short name of this package. */
+#cmakedefine PACKAGE_TARNAME @PACKAGE_TARNAME@
+
+/* Define to the home page for this package. */
+#cmakedefine PACKAGE_URL @PACKAGE_URL@
+
+/* Define to the version of this package. */
+#cmakedefine PACKAGE_VERSION @PACKAGE_VERSION@
+
+/* Define to necessary symbol if this constant uses a non-standard name on
+   your system. */
+#cmakedefine PTHREAD_CREATE_JOINABLE @PTHREAD_CREATE_JOINABLE@
+
+/* The size of `size_t', as computed by sizeof. */
+#cmakedefine SIZEOF_SIZE_T @SIZEOF_SIZE_T@
+
+/* Define to 1 if you have the ANSI C header files. */
+#cmakedefine STDC_HEADERS @STDC_HEADERS@
+
+/* Define to 1 if the number of available CPU cores can be detected with
+   cpuset(2). */
+#cmakedefine TUKLIB_CPUCORES_CPUSET @TUKLIB_CPUCORES_CPUSET@
+
+/* Define to 1 if the number of available CPU cores can be detected with
+   pstat_getdynamic(). */
+#cmakedefine TUKLIB_CPUCORES_PSTAT_GETDYNAMIC @TUKLIB_CPUCORES_PSTAT_GETDYNAMIC@
+
+/* Define to 1 if the number of available CPU cores can be detected with
+   sched_getaffinity() */
+#cmakedefine TUKLIB_CPUCORES_SCHED_GETAFFINITY @TUKLIB_CPUCORES_SCHED_GETAFFINITY@
+
+/* Define to 1 if the number of available CPU cores can be detected with
+   sysconf(_SC_NPROCESSORS_ONLN) or sysconf(_SC_NPROC_ONLN). */
+#cmakedefine TUKLIB_CPUCORES_SYSCONF @TUKLIB_CPUCORES_SYSCONF@
+
+/* Define to 1 if the number of available CPU cores can be detected with
+   sysctl(). */
+#cmakedefine TUKLIB_CPUCORES_SYSCTL @TUKLIB_CPUCORES_SYSCTL@
+
+/* Define to 1 if the system supports fast unaligned access to 16-bit and
+   32-bit integers. */
+#cmakedefine TUKLIB_FAST_UNALIGNED_ACCESS @TUKLIB_FAST_UNALIGNED_ACCESS@
+
+/* Define to 1 if the amount of physical memory can be detected with
+   _system_configuration.physmem. */
+#cmakedefine TUKLIB_PHYSMEM_AIX @TUKLIB_PHYSMEM_AIX@
+
+/* Define to 1 if the amount of physical memory can be detected with
+   getinvent_r(). */
+#cmakedefine TUKLIB_PHYSMEM_GETINVENT_R @TUKLIB_PHYSMEM_GETINVENT_R@
+
+/* Define to 1 if the amount of physical memory can be detected with
+   getsysinfo(). */
+#cmakedefine TUKLIB_PHYSMEM_GETSYSINFO @TUKLIB_PHYSMEM_GETSYSINFO@
+
+/* Define to 1 if the amount of physical memory can be detected with
+   pstat_getstatic(). */
+#cmakedefine TUKLIB_PHYSMEM_PSTAT_GETSTATIC @TUKLIB_PHYSMEM_PSTAT_GETSTATIC@
+
+/* Define to 1 if the amount of physical memory can be detected with
+   sysconf(_SC_PAGESIZE) and sysconf(_SC_PHYS_PAGES). */
+#cmakedefine TUKLIB_PHYSMEM_SYSCONF @TUKLIB_PHYSMEM_SYSCONF@
+
+/* Define to 1 if the amount of physical memory can be detected with sysctl().
+   */
+#cmakedefine TUKLIB_PHYSMEM_SYSCTL @TUKLIB_PHYSMEM_SYSCTL@
+
+/* Define to 1 if the amount of physical memory can be detected with Linux
+   sysinfo(). */
+#cmakedefine TUKLIB_PHYSMEM_SYSINFO @TUKLIB_PHYSMEM_SYSINFO@
+
+/* Define to 1 to use unsafe type punning, e.g. char *x = ...; *(int *)x =
+   123; which violates strict aliasing rules and thus is undefined behavior
+   and might result in broken code. */
+#cmakedefine TUKLIB_USE_UNSAFE_TYPE_PUNNING @TUKLIB_USE_UNSAFE_TYPE_PUNNING@
+
+/* Enable extensions on AIX 3, Interix.  */
+#ifndef _ALL_SOURCE
+# define _ALL_SOURCE 1
+#endif
+/* Enable GNU extensions on systems that have them.  */
+#ifndef _GNU_SOURCE
+# define _GNU_SOURCE 1
+#endif
+/* Enable threading extensions on Solaris.  */
+#ifndef _POSIX_PTHREAD_SEMANTICS
+# define _POSIX_PTHREAD_SEMANTICS 1
+#endif
+/* Enable extensions on HP NonStop.  */
+#ifndef _TANDEM_SOURCE
+# define _TANDEM_SOURCE 1
+#endif
+/* Enable general extensions on Solaris.  */
+#ifndef __EXTENSIONS__
+# define __EXTENSIONS__ 1
+#endif
+
+
+
+/* Version number of package */
+#cmakedefine VERSION @VERSION@
+
+/* Define WORDS_BIGENDIAN to 1 if your processor stores words with the most
+   significant byte first (like Motorola and SPARC, unlike Intel). */
+#if defined AC_APPLE_UNIVERSAL_BUILD
+# if defined __BIG_ENDIAN__
+#  define WORDS_BIGENDIAN 1
+# endif
+#else
+# ifndef WORDS_BIGENDIAN
+#cmakedefine WORDS_BIGENDIAN
+# endif
+#endif
+
+/* Enable large inode numbers on Mac OS X 10.5.  */
+#ifndef _DARWIN_USE_64_BIT_INODE
+# define _DARWIN_USE_64_BIT_INODE 1
+#endif
+
+/* Number of bits in a file offset, on hosts where this is settable. */
+#cmakedefine _FILE_OFFSET_BITS @_FILE_OFFSET_BITS@
+
+/* Define for large files, on AIX-style hosts. */
+#cmakedefine _LARGE_FILES @_LARGE_FILES@
+
+/* Define to 1 if on MINIX. */
+#cmakedefine _MINIX @_MINIX@
+
+/* Define to 2 if the system does not provide POSIX.1 features except with
+   this defined. */
+#cmakedefine _POSIX_1_SOURCE @_POSIX_1_SOURCE@
+
+/* Define to 1 if you need to in order for `stat' and other things to work. */
+#cmakedefine _POSIX_SOURCE @_POSIX_SOURCE@
+
+/* Define for Solaris 2.5.1 so the uint32_t typedef from <sys/synch.h>,
+   <pthread.h>, or <semaphore.h> is not used. If the typedef were allowed, the
+   #define below would cause a syntax error. */
+#cmakedefine _UINT32_T @_UINT32_T@
+
+/* Define for Solaris 2.5.1 so the uint64_t typedef from <sys/synch.h>,
+   <pthread.h>, or <semaphore.h> is not used. If the typedef were allowed, the
+   #define below would cause a syntax error. */
+#cmakedefine _UINT64_T @_UINT64_T@
+
+/* Define for Solaris 2.5.1 so the uint8_t typedef from <sys/synch.h>,
+   <pthread.h>, or <semaphore.h> is not used. If the typedef were allowed, the
+   #define below would cause a syntax error. */
+#cmakedefine _UINT8_T @_UINT8_T@
+
+/* Define to rpl_ if the getopt replacement functions and variables should be
+   used. */
+#cmakedefine __GETOPT_PREFIX @__GETOPT_PREFIX@
+
+/* Define to the type of a signed integer type of width exactly 32 bits if
+   such a type exists and the standard includes do not define it. */
+#cmakedefine int32_t @int32_t@
+
+/* Define to the type of a signed integer type of width exactly 64 bits if
+   such a type exists and the standard includes do not define it. */
+#cmakedefine int64_t @int64_t@
+
+/* Define to the type of an unsigned integer type of width exactly 16 bits if
+   such a type exists and the standard includes do not define it. */
+#cmakedefine uint16_t @uint16_t@
+
+/* Define to the type of an unsigned integer type of width exactly 32 bits if
+   such a type exists and the standard includes do not define it. */
+#cmakedefine uint32_t @uint32_t@
+
+/* Define to the type of an unsigned integer type of width exactly 64 bits if
+   such a type exists and the standard includes do not define it. */
+#cmakedefine uint64_t @uint64_t@
+
+/* Define to the type of an unsigned integer type of width exactly 8 bits if
+   such a type exists and the standard includes do not define it. */
+#cmakedefine uint8_t @uint8_t@
+
+/* Define to the type of an unsigned integer type wide enough to hold a
+   pointer, if such a type exists, and if the system does not define it. */
+#cmakedefine uintptr_t @uintptr_t@
+
+//Windows compatibilty stuff
+#ifdef _WIN32
+
+#cmakedefine mode_t @mode_t@
+#cmakedefine ssize_t @ssize_t@
+
+#if !S_IWUSR
+# define S_IWUSR 00200
+#endif
+
+#if !S_IRUSR
+# define S_IRUSR 00400
+#endif
+
+#ifndef S_ISDIR
+# ifdef S_IFDIR
+#  define S_ISDIR(m) (((m) & S_IFMT) == S_IFDIR)
+# else
+#  define S_ISDIR(m) 0
+# endif
+#endif
+
+#ifndef S_ISREG
+# ifdef S_IFREG
+#  define S_ISREG(m) (((m) & S_IFMT) == S_IFREG)
+# else
+#  define S_ISREG(m) 0
+# endif
+#endif
+
+# ifdef _MSC_VER
+
+#  define strcasecmp _stricmp
+
+extern unsigned char _BitScanReverse(
+   unsigned long * Index,
+   unsigned long Mask
+);
+
+extern unsigned char _BitScanForward(
+   unsigned long * Index,
+   unsigned long Mask
+);
+
+#  pragma intrinsic(_BitScanReverse)
+#  pragma intrinsic(_BitScanForward)
+
+# endif
+
+#endif
