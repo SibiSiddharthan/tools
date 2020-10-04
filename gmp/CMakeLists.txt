@@ -39,6 +39,7 @@ include(CheckCCompilerFlag)
 include(alloca)
 include(inline)
 include(restrict)
+include(TimeWithSysTime)
 
 check_c_headers(dlfcn.h fcntl.h float.h inttypes.h invent.h langinfo.h locale.h nl_types.h
 nl_types.h stdint.h stdlib.h strings.h string.h machine/hal_sysinfo.h memory.h
@@ -130,20 +131,6 @@ main ()
   return 0;
 }"
 HAVE_HIDDEN_ALIAS)
-
-check_c_source_compiles("
-#include <sys/types.h>
-#include <sys/time.h>
-#include <time.h>
-
-int
-main ()
-{
-	if ((struct tm *) 0)
-		return 0;
-}"
-TIME_WITH_SYS_TIME)
-
 
 include(HostCPUArch)
 set(GMP_COMPILE_FLAGS ${CMAKE_C_FLAGS_${CMAKE_BUILD_TYPE}})

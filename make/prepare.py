@@ -25,6 +25,7 @@ if os.path.isdir(directory):
 	shutil.copyfile("../cmake-modules/fork.cmake","{}/cmake-modules/fork.cmake".format(directory))
 	shutil.copyfile("../cmake-modules/alloca.cmake","{}/cmake-modules/alloca.cmake".format(directory))
 	shutil.copyfile("../cmake-modules/LargeFiles.cmake","{}/cmake-modules/LargeFiles.cmake".format(directory))
+	shutil.copyfile("../cmake-modules/TimeWithSysTime.cmake","{}/cmake-modules/TimeWithSysTime.cmake".format(directory))
 
 if platform.system() == "Windows":
 	shutil.copyfile("{}/makeint.h".format(directory),"./makeint.h")

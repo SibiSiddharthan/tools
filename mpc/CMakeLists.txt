@@ -20,11 +20,12 @@ if(WIN32)
 endif()
 
 set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake-modules)
+find_package(MPFR REQUIRED)
+find_package(GMP REQUIRED)
 include(UtilityFunctions)
 include(CheckCSourceCompiles)
 include(alloca)
-find_package(MPFR REQUIRED)
-find_package(GMP REQUIRED)
+include(TimeWithSysTime)
 
 check_c_headers(dlfcn.h inttypes.h limits.h memory.h locale.h stdint.h
 stdlib.h strings.h string.h sys/resource.h sys/stat.h sys/time.h sys/types.h unistd.h)
@@ -53,21 +54,6 @@ complex double x = 1.0 + 2.0 * I; return (creal (x) + cimag (x));
   return 0;
 }"
 HAVE_COMPLEX_H)
-
-check_c_source_compiles("
-#include <sys/types.h>
-#include <sys/time.h>
-#include <time.h>
-
-int
-main ()
-{
-if ((struct tm *) 0)
-return 0;
-  ;
-  return 0;
-}"
-TIME_WITH_SYS_TIME)
 
 set(CMAKE_REQUIRED_LIBRARIES  ${MPFR_LIBRARIES} ${GMP_LIBRARIES})
 set(CMAKE_REQUIRED_INCLUDES ${MPFR_INCLUDE_DIRS} ${GMP_INCLUDE_DIRS})

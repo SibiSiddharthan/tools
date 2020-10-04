@@ -28,16 +28,15 @@ if(WIN32)
 endif()
 
 set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake-modules)
+find_package(GMP REQUIRED)
 include(UtilityFunctions)
 include(CheckCSourceCompiles)
 include(CheckCSourceRuns)
 include(CheckStructHasMember)
 include(alloca)
 include(endianess-check)
-
-find_package(GMP REQUIRED)
 include(printf-check)
-
+include(TimeWithSysTime)
 
 check_c_headers( dlfcn.h float.h inttypes.h stdint.h wchar.h stdarg.h locale.h
 	stdint.h stdlib.h strings.h string.h sys/stat.h sys/types.h sys/time.h
@@ -62,19 +61,6 @@ check_types("long long" "long double"  intmax_t size_t)
 
 check_struct_has_member("struct lconv" decimal_point locale.h HAVE_STRUCT_LCONV_DECIMAL_POINT)
 check_struct_has_member("struct lconv" thousands_sep locale.h HAVE_STRUCT_LCONV_THOUSANDS_SEP)
-
-check_c_source_compiles("
-#include <sys/types.h>
-#include <sys/time.h>
-#include <time.h>
-
-int
-main ()
-{
-	if ((struct tm *) 0)
-	return 0;
-}"
-TIME_WITH_SYS_TIME)
 
 check_c_source_compiles("
 int foo (int x) __attribute__ ((const));

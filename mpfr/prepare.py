@@ -23,4 +23,5 @@ if os.path.isdir(directory):
 	shutil.copyfile("../cmake-modules/FindGMP.cmake","{}/cmake-modules/FindGMP.cmake".format(directory))
 	shutil.copyfile("endianess-check.cmake","{}/cmake-modules/endianess-check.cmake".format(directory))
 	shutil.copyfile("printf-check.cmake","{}/cmake-modules/printf-check.cmake".format(directory))
+	shutil.copyfile("../cmake-modules/TimeWithSysTime.cmake","{}/cmake-modules/TimeWithSysTime.cmake".format(directory))
 

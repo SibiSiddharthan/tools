@@ -35,6 +35,7 @@ include(CheckStructHasMember)
 include(alloca)
 include(fork)
 include(LargeFiles)
+include(TimeWithSysTime)
 
 if(Intl_FOUND)
 	set(HAVE_ICONV)
@@ -262,21 +263,6 @@ if(RETSIGTYPE)
 else()
 	set(RETSIGTYPE void)
 endif()
-
-check_c_source_compiles("
-#include <sys/types.h>
-#include <sys/time.h>
-#include <time.h>
-
-int
-main ()
-{
-if ((struct tm *) 0)
-return 0;
-  ;
-  return 0;
-}"
-TIME_WITH_SYS_TIME)
 
 check_c_source_runs("
 int

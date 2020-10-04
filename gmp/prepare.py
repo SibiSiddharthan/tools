@@ -25,6 +25,7 @@ if os.path.isdir(directory):
 	shutil.copyfile("../cmake-modules/inline.cmake","{}/cmake-modules/inline.cmake".format(directory))
 	shutil.copyfile("../cmake-modules/restrict.cmake","{}/cmake-modules/restrict.cmake".format(directory))
 	shutil.copyfile("../cmake-modules/alloca.cmake","{}/cmake-modules/alloca.cmake".format(directory))
+	shutil.copyfile("../cmake-modules/TimeWithSysTime.cmake","{}/cmake-modules/TimeWithSysTime.cmake".format(directory))
 	shutil.copyfile("HostCPUArch.cmake","{}/cmake-modules/HostCPUArch.cmake".format(directory))
 	shutil.copyfile("mpn-generic.cmake","{}/cmake-modules/mpn-generic.cmake".format(directory))
 	shutil.copyfile("mpn-asm.cmake","{}/cmake-modules/mpn-asm.cmake".format(directory))

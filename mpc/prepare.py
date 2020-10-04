@@ -23,6 +23,7 @@ if os.path.isdir(directory):
 	shutil.copyfile("../cmake-modules/FindGMP.cmake","{}/cmake-modules/FindGMP.cmake".format(directory))
 	shutil.copyfile("../cmake-modules/FindMPFR.cmake","{}/cmake-modules/FindMPFR.cmake".format(directory))
 	shutil.copyfile("../cmake-modules/alloca.cmake","{}/cmake-modules/alloca.cmake".format(directory))
+	shutil.copyfile("../cmake-modules/TimeWithSysTime.cmake","{}/cmake-modules/TimeWithSysTime.cmake".format(directory))
 
 shutil.copyfile("{}/tools/bench/mpcbench.c".format(directory),"./mpcbench.c")
 success = os.system("git --work-tree=. --git-dir=.git apply {}".format(patchfile))
