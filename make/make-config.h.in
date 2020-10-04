@@ -1,0 +1,506 @@
+/* config.h.in.  Generated from configure.ac by autoheader.  */
+
+/* Define to 1 if the `closedir' function returns void instead of `int'. */
+#cmakedefine CLOSEDIR_VOID @CLOSEDIR_VOID@
+
+/* Define to one of `_getb67', `GETB67', `getb67' for Cray-2 and Cray-YMP
+   systems. This function is required for `alloca.c' support on those systems.
+   */
+#cmakedefine CRAY_STACKSEG_END @CRAY_STACKSEG_END@
+
+/* Define to 1 if using `alloca.c'. */
+#cmakedefine C_ALLOCA @C_ALLOCA@
+
+/* Define to 1 if using `getloadavg.c'. */
+#cmakedefine C_GETLOADAVG @C_GETLOADAVG@
+
+/* Define to 1 for DGUX with <sys/dg_sys_info.h>. */
+#cmakedefine DGUX @DGUX@
+
+/* Define to 1 if translation of program messages to the user's native
+   language is requested. */
+#cmakedefine ENABLE_NLS @ENABLE_NLS@
+
+/* Use high resolution file timestamps if nonzero. */
+#cmakedefine01 FILE_TIMESTAMP_HI_RES
+
+/* Define to 1 if the `getloadavg' function needs to be run setuid or setgid.
+   */
+#cmakedefine GETLOADAVG_PRIVILEGED @GETLOADAVG_PRIVILEGED@
+
+/* Define to 1 if you have `alloca', as a function or macro. */
+#cmakedefine HAVE_ALLOCA @HAVE_ALLOCA@
+
+/* Define to 1 if you have <alloca.h> and it should be used (not on Ultrix).
+   */
+#cmakedefine HAVE_ALLOCA_H @HAVE_ALLOCA_H@
+
+/* Define to 1 if you have the `atexit' function. */
+#cmakedefine HAVE_ATEXIT @HAVE_ATEXIT@
+
+/* Use case insensitive file names */
+#cmakedefine HAVE_CASE_INSENSITIVE_FS @HAVE_CASE_INSENSITIVE_FS@
+
+/* Define to 1 if you have the Mac OS X function CFLocaleCopyCurrent in the
+   CoreFoundation framework. */
+#cmakedefine HAVE_CFLOCALECOPYCURRENT @HAVE_CFLOCALECOPYCURRENT@
+
+/* Define to 1 if you have the Mac OS X function CFPreferencesCopyAppValue in
+   the CoreFoundation framework. */
+#cmakedefine HAVE_CFPREFERENCESCOPYAPPVALUE @HAVE_CFPREFERENCESCOPYAPPVALUE@
+
+/* Define to 1 if you have the clock_gettime function. */
+#cmakedefine HAVE_CLOCK_GETTIME @HAVE_CLOCK_GETTIME@
+
+/* Define if the GNU dcgettext() function is already present or preinstalled.
+   */
+#cmakedefine HAVE_DCGETTEXT @HAVE_DCGETTEXT@
+
+/* Define to 1 if you have the declaration of `bsd_signal', and to 0 if you
+   don't. */
+#cmakedefine01 HAVE_DECL_BSD_SIGNAL
+
+/* Define to 1 if you have the declaration of `dlerror', and to 0 if you
+   don't. */
+#cmakedefine01 HAVE_DECL_DLERROR
+
+/* Define to 1 if you have the declaration of `dlopen', and to 0 if you don't.
+   */
+#cmakedefine01 HAVE_DECL_DLOPEN
+
+/* Define to 1 if you have the declaration of `dlsym', and to 0 if you don't.
+   */
+#cmakedefine01 HAVE_DECL_DLSYM
+
+/* Define to 1 if you have the declaration of `sys_siglist', and to 0 if you
+   don't. */
+#cmakedefine01 HAVE_DECL_SYS_SIGLIST
+
+/* Define to 1 if you have the declaration of `_sys_siglist', and to 0 if you
+   don't. */
+#cmakedefine01 HAVE_DECL__SYS_SIGLIST
+
+/* Define to 1 if you have the declaration of `__sys_siglist', and to 0 if you
+   don't. */
+#cmakedefine01 HAVE_DECL___SYS_SIGLIST
+
+/* Define to 1 if you have the <dirent.h> header file, and it defines `DIR'.
+   */
+#cmakedefine HAVE_DIRENT_H @HAVE_DIRENT_H@
+
+/* Use platform specific coding */
+#cmakedefine HAVE_DOS_PATHS @HAVE_DOS_PATHS@
+
+/* Define to 1 if you have the `dup' function. */
+#cmakedefine HAVE_DUP @HAVE_DUP@
+
+/* Define to 1 if you have the `dup2' function. */
+#cmakedefine HAVE_DUP2 @HAVE_DUP2@
+
+/* Define to 1 if you have the <fcntl.h> header file. */
+#cmakedefine HAVE_FCNTL_H @HAVE_FCNTL_H@
+
+/* Define to 1 if you have the `fdopen' function. */
+#cmakedefine HAVE_FDOPEN @HAVE_FDOPEN@
+
+/* Define to 1 if you have the `fileno' function. */
+#cmakedefine HAVE_FILENO @HAVE_FILENO@
+
+/* Define to 1 if you have the `fork' function. */
+#cmakedefine HAVE_FORK @HAVE_FORK@
+
+/* Define to 1 if you have the `getcwd' function. */
+#cmakedefine HAVE_GETCWD @HAVE_GETCWD@
+
+/* Define to 1 if you have the `getgroups' function. */
+#cmakedefine HAVE_GETGROUPS @HAVE_GETGROUPS@
+
+/* Define to 1 if you have the `gethostbyname' function. */
+#cmakedefine HAVE_GETHOSTBYNAME @HAVE_GETHOSTBYNAME@
+
+/* Define to 1 if you have the `gethostname' function. */
+#cmakedefine HAVE_GETHOSTNAME @HAVE_GETHOSTNAME@
+
+/* Define to 1 if you have the `getloadavg' function. */
+#cmakedefine HAVE_GETLOADAVG @HAVE_GETLOADAVG@
+
+/* Define to 1 if you have the `getrlimit' function. */
+#cmakedefine HAVE_GETRLIMIT @HAVE_GETRLIMIT@
+
+/* Define if the GNU gettext() function is already present or preinstalled. */
+#cmakedefine HAVE_GETTEXT @HAVE_GETTEXT@
+
+/* Define to 1 if you have a standard gettimeofday function */
+#cmakedefine HAVE_GETTIMEOFDAY @HAVE_GETTIMEOFDAY@
+
+/* Embed GNU Guile support */
+#cmakedefine HAVE_GUILE @HAVE_GUILE@
+
+/* Define if you have the iconv() function and it works. */
+#cmakedefine HAVE_ICONV @HAVE_ICONV@
+
+/* Define to 1 if you have the <inttypes.h> header file. */
+#cmakedefine HAVE_INTTYPES_H @HAVE_INTTYPES_H@
+
+/* Define to 1 if you have the `isatty' function. */
+#cmakedefine HAVE_ISATTY @HAVE_ISATTY@
+
+/* Define to 1 if you have the `dgc' library (-ldgc). */
+#cmakedefine HAVE_LIBDGC @HAVE_LIBDGC@
+
+/* Define to 1 if you have the `kstat' library (-lkstat). */
+#cmakedefine HAVE_LIBKSTAT @HAVE_LIBKSTAT@
+
+/* Define to 1 if you have the <limits.h> header file. */
+#cmakedefine HAVE_LIMITS_H @HAVE_LIMITS_H@
+
+/* Define to 1 if you have the <locale.h> header file. */
+#cmakedefine HAVE_LOCALE_H @HAVE_LOCALE_H@
+
+/* Define to 1 if you have the `lstat' function. */
+#cmakedefine HAVE_LSTAT @HAVE_LSTAT@
+
+/* Define to 1 if you have the <mach/mach.h> header file. */
+#cmakedefine HAVE_MACH_MACH_H @HAVE_MACH_MACH_H@
+
+/* Define to 1 if you have the <memory.h> header file. */
+#cmakedefine HAVE_MEMORY_H @HAVE_MEMORY_H@
+
+/* Define to 1 if you have the `mkstemp' function. */
+#cmakedefine HAVE_MKSTEMP @HAVE_MKSTEMP@
+
+/* Define to 1 if you have the `mktemp' function. */
+#cmakedefine HAVE_MKTEMP @HAVE_MKTEMP@
+
+/* Define to 1 if you have the <ndir.h> header file, and it defines `DIR'. */
+#cmakedefine HAVE_NDIR_H @HAVE_NDIR_H@
+
+/* Define to 1 if you have the <nlist.h> header file. */
+#cmakedefine HAVE_NLIST_H @HAVE_NLIST_H@
+
+/* Define to 1 if you have the `pipe' function. */
+#cmakedefine HAVE_PIPE @HAVE_PIPE@
+
+/* Define to 1 if you have the `pselect' function. */
+#cmakedefine HAVE_PSELECT @HAVE_PSELECT@
+
+/* Define to 1 if you have the `pstat_getdynamic' function. */
+#cmakedefine HAVE_PSTAT_GETDYNAMIC @HAVE_PSTAT_GETDYNAMIC@
+
+/* Define to 1 if you have the `readlink' function. */
+#cmakedefine HAVE_READLINK @HAVE_READLINK@
+
+/* Define to 1 if you have the `realpath' function. */
+#cmakedefine HAVE_REALPATH @HAVE_REALPATH@
+
+/* Define to 1 if <signal.h> defines the SA_RESTART constant. */
+#cmakedefine HAVE_SA_RESTART @HAVE_SA_RESTART@
+
+/* Define to 1 if you have the `setegid' function. */
+#cmakedefine HAVE_SETEGID @HAVE_SETEGID@
+
+/* Define to 1 if you have the `seteuid' function. */
+#cmakedefine HAVE_SETEUID @HAVE_SETEUID@
+
+/* Define to 1 if you have the `setlinebuf' function. */
+#cmakedefine HAVE_SETLINEBUF @HAVE_SETLINEBUF@
+
+/* Define to 1 if you have the `setlocale' function. */
+#cmakedefine HAVE_SETLOCALE @HAVE_SETLOCALE@
+
+/* Define to 1 if you have the `setregid' function. */
+#cmakedefine HAVE_SETREGID @HAVE_SETREGID@
+
+/* Define to 1 if you have the `setreuid' function. */
+#cmakedefine HAVE_SETREUID @HAVE_SETREUID@
+
+/* Define to 1 if you have the `setrlimit' function. */
+#cmakedefine HAVE_SETRLIMIT @HAVE_SETRLIMIT@
+
+/* Define to 1 if you have the `setvbuf' function. */
+#cmakedefine HAVE_SETVBUF @HAVE_SETVBUF@
+
+/* Define to 1 if you have the `sigaction' function. */
+#cmakedefine HAVE_SIGACTION @HAVE_SIGACTION@
+
+/* Define to 1 if you have the `sigsetmask' function. */
+#cmakedefine HAVE_SIGSETMASK @HAVE_SIGSETMASK@
+
+/* Define to 1 if you have the `socket' function. */
+#cmakedefine HAVE_SOCKET @HAVE_SOCKET@
+
+/* Define to 1 if you have the <stdint.h> header file. */
+#cmakedefine HAVE_STDINT_H @HAVE_STDINT_H@
+
+/* Define to 1 if you have the <stdlib.h> header file. */
+#cmakedefine HAVE_STDLIB_H @HAVE_STDLIB_H@
+
+/* Define to 1 if you have the `strcasecmp' function. */
+#cmakedefine HAVE_STRCASECMP @HAVE_STRCASECMP@
+
+/* Define to 1 if you have the `strcmpi' function. */
+#cmakedefine HAVE_STRCMPI @HAVE_STRCMPI@
+
+/* Define to 1 if you have the `strcoll' function and it is properly defined.
+   */
+#cmakedefine HAVE_STRCOLL @HAVE_STRCOLL@
+
+/* Define to 1 if you have the `strdup' function. */
+#cmakedefine HAVE_STRDUP @HAVE_STRDUP@
+
+/* Define to 1 if you have the `strerror' function. */
+#cmakedefine HAVE_STRERROR @HAVE_STRERROR@
+
+/* Define to 1 if you have the `stricmp' function. */
+#cmakedefine HAVE_STRICMP @HAVE_STRICMP@
+
+/* Define to 1 if you have the <strings.h> header file. */
+#cmakedefine HAVE_STRINGS_H @HAVE_STRINGS_H@
+
+/* Define to 1 if you have the <string.h> header file. */
+#cmakedefine HAVE_STRING_H @HAVE_STRING_H@
+
+/* Define to 1 if you have the `strncasecmp' function. */
+#cmakedefine HAVE_STRNCASECMP @HAVE_STRNCASECMP@
+
+/* Define to 1 if you have the `strncmpi' function. */
+#cmakedefine HAVE_STRNCMPI @HAVE_STRNCMPI@
+
+/* Define to 1 if you have the `strndup' function. */
+#cmakedefine HAVE_STRNDUP @HAVE_STRNDUP@
+
+/* Define to 1 if you have the `strnicmp' function. */
+#cmakedefine HAVE_STRNICMP @HAVE_STRNICMP@
+
+/* Define to 1 if you have the `strsignal' function. */
+#cmakedefine HAVE_STRSIGNAL @HAVE_STRSIGNAL@
+
+/* Define to 1 if `n_un.n_name' is a member of `struct nlist'. */
+#cmakedefine HAVE_STRUCT_NLIST_N_UN_N_NAME @HAVE_STRUCT_NLIST_N_UN_N_NAME@
+
+/* Define to 1 if you have the <sys/dir.h> header file, and it defines `DIR'.
+   */
+#cmakedefine HAVE_SYS_DIR_H @HAVE_SYS_DIR_H@
+
+/* Define to 1 if you have the <sys/ndir.h> header file, and it defines `DIR'.
+   */
+#cmakedefine HAVE_SYS_NDIR_H @HAVE_SYS_NDIR_H@
+
+/* Define to 1 if you have the <sys/param.h> header file. */
+#cmakedefine HAVE_SYS_PARAM_H @HAVE_SYS_PARAM_H@
+
+/* Define to 1 if you have the <sys/resource.h> header file. */
+#cmakedefine HAVE_SYS_RESOURCE_H @HAVE_SYS_RESOURCE_H@
+
+/* Define to 1 if you have the <sys/select.h> header file. */
+#cmakedefine HAVE_SYS_SELECT_H @HAVE_SYS_SELECT_H@
+
+/* Define to 1 if you have the <sys/stat.h> header file. */
+#cmakedefine HAVE_SYS_STAT_H @HAVE_SYS_STAT_H@
+
+/* Define to 1 if you have the <sys/timeb.h> header file. */
+#cmakedefine HAVE_SYS_TIMEB_H @HAVE_SYS_TIMEB_H@
+
+/* Define to 1 if you have the <sys/time.h> header file. */
+#cmakedefine HAVE_SYS_TIME_H @HAVE_SYS_TIME_H@
+
+/* Define to 1 if you have the <sys/types.h> header file. */
+#cmakedefine HAVE_SYS_TYPES_H @HAVE_SYS_TYPES_H@
+
+/* Define to 1 if you have the <sys/wait.h> header file. */
+#cmakedefine HAVE_SYS_WAIT_H @HAVE_SYS_WAIT_H@
+
+/* Define to 1 if you have the `ttyname' function. */
+#cmakedefine HAVE_TTYNAME @HAVE_TTYNAME@
+
+/* Define to 1 if the system has the type `uintmax_t'. */
+#cmakedefine HAVE_UINTMAX_T @HAVE_UINTMAX_T@
+
+/* Define to 1 if you have the 'union wait' type in <sys/wait.h>. */
+#cmakedefine HAVE_UNION_WAIT @HAVE_UNION_WAIT@
+
+/* Define to 1 if you have the <unistd.h> header file. */
+#cmakedefine HAVE_UNISTD_H @HAVE_UNISTD_H@
+
+/* Define to 1 if the system has the type 'unsigned long long int'. */
+#cmakedefine HAVE_UNSIGNED_LONG_LONG_INT @HAVE_UNSIGNED_LONG_LONG_INT@
+
+/* Define to 1 if you have the `vfork' function. */
+#cmakedefine HAVE_VFORK @HAVE_VFORK@
+
+/* Define to 1 if you have the <vfork.h> header file. */
+#cmakedefine HAVE_VFORK_H @HAVE_VFORK_H@
+
+/* Define to 1 if you have the `wait3' function. */
+#cmakedefine HAVE_WAIT3 @HAVE_WAIT3@
+
+/* Define to 1 if you have the `waitpid' function. */
+#cmakedefine HAVE_WAITPID @HAVE_WAITPID@
+
+/* Define to 1 if `fork' works. */
+#cmakedefine HAVE_WORKING_FORK @HAVE_WORKING_FORK@
+
+/* Define to 1 if `vfork' works. */
+#cmakedefine HAVE_WORKING_VFORK @HAVE_WORKING_VFORK@
+
+/* Build host information. */
+#cmakedefine MAKE_HOST @MAKE_HOST@
+
+/* Define to 1 to enable job server support in GNU make. */
+#cmakedefine MAKE_JOBSERVER @MAKE_JOBSERVER@
+
+/* Define to 1 to enable 'load' support in GNU make. */
+#cmakedefine MAKE_LOAD @MAKE_LOAD@
+
+/* Define to 1 to enable symbolic link timestamp checking. */
+#cmakedefine MAKE_SYMLINKS @MAKE_SYMLINKS@
+
+/* Define to 1 if your `struct nlist' has an `n_un' member. Obsolete, depend
+   on `HAVE_STRUCT_NLIST_N_UN_N_NAME */
+#cmakedefine NLIST_NAME_UNION @NLIST_NAME_UNION@
+
+/* Define to 1 if struct nlist.n_name is a pointer rather than an array. */
+#cmakedefine NLIST_STRUCT @NLIST_STRUCT@
+
+/* Name of package */
+#cmakedefine PACKAGE @PACKAGE@
+
+/* Define to the address where bug reports for this package should be sent. */
+#cmakedefine PACKAGE_BUGREPORT @PACKAGE_BUGREPORT@
+
+/* Define to the full name of this package. */
+#cmakedefine PACKAGE_NAME @PACKAGE_NAME@
+
+/* Define to the full name and version of this package. */
+#cmakedefine PACKAGE_STRING @PACKAGE_STRING@
+
+/* Define to the one symbol short name of this package. */
+#cmakedefine PACKAGE_TARNAME @PACKAGE_TARNAME@
+
+/* Define to the home page for this package. */
+#cmakedefine PACKAGE_URL @PACKAGE_URL@
+
+/* Define to the version of this package. */
+#cmakedefine PACKAGE_VERSION @PACKAGE_VERSION@
+
+/* Define to the character that separates directories in PATH. */
+#cmakedefine PATH_SEPARATOR_CHAR @PATH_SEPARATOR_CHAR@
+
+/* Define as the return type of signal handlers (`int' or `void'). */
+#cmakedefine RETSIGTYPE @RETSIGTYPE@
+
+/* Define to the name of the SCCS 'get' command. */
+#cmakedefine SCCS_GET @SCCS_GET@
+
+/* Define to 1 if the SCCS 'get' command understands the '-G<file>' option. */
+#cmakedefine SCCS_GET_MINUS_G @SCCS_GET_MINUS_G@
+
+/* If using the C implementation of alloca, define if you know the
+   direction of stack growth for your system; otherwise it will be
+   automatically deduced at runtime.
+	STACK_DIRECTION > 0 => grows toward higher addresses
+	STACK_DIRECTION < 0 => grows toward lower addresses
+	STACK_DIRECTION = 0 => direction of growth unknown */
+#cmakedefine STACK_DIRECTION @STACK_DIRECTION@
+
+/* Define to 1 if the `S_IS*' macros in <sys/stat.h> do not work properly. */
+#cmakedefine STAT_MACROS_BROKEN @STAT_MACROS_BROKEN@
+
+/* Define to 1 if you have the ANSI C header files. */
+#cmakedefine STDC_HEADERS @STDC_HEADERS@
+
+/* Define if struct stat contains a nanoseconds field */
+#cmakedefine ST_MTIM_NSEC @ST_MTIM_NSEC@
+
+/* Define to 1 on System V Release 4. */
+#cmakedefine SVR4 @SVR4@
+
+/* Define to 1 if you can safely include both <sys/time.h> and <time.h>. */
+#cmakedefine TIME_WITH_SYS_TIME @TIME_WITH_SYS_TIME@
+
+/* Define to 1 for Encore UMAX. */
+#cmakedefine UMAX @UMAX@
+
+/* Define to 1 for Encore UMAX 4.3 that has <inq_status/cpustats.h> instead of
+   <sys/cpustats.h>. */
+#cmakedefine UMAX4_3 @UMAX4_3@
+
+/* Enable extensions on AIX 3, Interix.  */
+#ifndef _ALL_SOURCE
+# define _ALL_SOURCE 1
+#endif
+/* Enable GNU extensions on systems that have them.  */
+#ifndef _GNU_SOURCE
+# define _GNU_SOURCE 1
+#endif
+/* Enable threading extensions on Solaris.  */
+#ifndef _POSIX_PTHREAD_SEMANTICS
+# define _POSIX_PTHREAD_SEMANTICS 1
+#endif
+/* Enable extensions on HP NonStop.  */
+#ifndef _TANDEM_SOURCE
+# define _TANDEM_SOURCE 1
+#endif
+/* Enable general extensions on Solaris.  */
+#ifndef __EXTENSIONS__
+# define __EXTENSIONS__ 1
+#endif
+
+
+/* Version number of package */
+#cmakedefine VERSION @VERSION@
+
+/* Use platform specific coding */
+#cmakedefine WINDOWS32 @WINDOWS32@
+
+/* Define if using the dmalloc debugging malloc package */
+#cmakedefine WITH_DMALLOC @WITH_DMALLOC@
+
+/* Enable large inode numbers on Mac OS X 10.5.  */
+#ifndef _DARWIN_USE_64_BIT_INODE
+# define _DARWIN_USE_64_BIT_INODE 1
+#endif
+
+/* Number of bits in a file offset, on hosts where this is settable. */
+#cmakedefine _FILE_OFFSET_BITS @_FILE_OFFSET_BITS@
+
+/* Define for large files, on AIX-style hosts. */
+#cmakedefine _LARGE_FILES @_LARGE_FILES@
+
+/* Define to 1 if on MINIX. */
+#cmakedefine _MINIX @_MINIX@
+
+/* Define to 2 if the system does not provide POSIX.1 features except with
+   this defined. */
+#cmakedefine _POSIX_1_SOURCE @_POSIX_1_SOURCE@
+
+/* Define to 1 if you need to in order for `stat' and other things to work. */
+#cmakedefine _POSIX_SOURCE @_POSIX_SOURCE@
+
+/* Define to empty if `const' does not conform to ANSI C. */
+#cmakedefine const @const@
+
+/* Define to `int' if <sys/types.h> doesn't define. */
+#cmakedefine gid_t @gid_t@
+
+/* Define to `long int' if <sys/types.h> does not define. */
+#cmakedefine off_t @off_t@
+
+/* Define to `int' if <sys/types.h> does not define. */
+#cmakedefine pid_t @pid_t@
+
+/* Define to `unsigned int' if <sys/types.h> does not define. */
+#cmakedefine size_t @size_t@
+
+/* Define to `int' if <sys/types.h> does not define. */
+#cmakedefine ssize_t @ssize_t@
+
+/* Define to `int' if <sys/types.h> doesn't define. */
+#cmakedefine uid_t @uid_t@
+
+/* Define to the widest unsigned integer type if <stdint.h> and <inttypes.h>
+   do not define. */
+#cmakedefine uintmax_t @uintmax_t@
+
+/* Define as `fork' if `vfork' does not work. */
+#cmakedefine vfork @vfork@

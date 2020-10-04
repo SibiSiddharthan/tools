@@ -1,0 +1,27 @@
+diff --git a/makeint.h b/makeint1.h
+index 8f718eb..46d8bb2 100644
+--- a/makeint.h
++++ b/makeint.h
+@@ -634,7 +634,9 @@ int strncasecmp (const char *s1, const char *s2, int n);
+ #define OUTPUT_SYNC_RECURSE 3
+ 
+ /* Non-GNU systems may not declare this in unistd.h.  */
++#ifndef _WIN32
+ extern char **environ;
++#endif
+ 
+ extern const floc *reading_file;
+ extern const floc **expanding_var;
+
+diff --git a/posixfcn.c b/posixfcn1.c
+index c760cc8..09f8fef 100644
+--- a/posixfcn.c
++++ b/posixfcn.c
+@@ -261,6 +261,7 @@ same_stream (FILE *f1, FILE *f2)
+    the file in the root directory of the current drive, which might
+    not be writable by our user.  Most of the code borrowed from
+    create_batch_file, see job.c.  */
++#define tmpfile rpl_tempfile
+ FILE *
+ tmpfile (void)
+ {
