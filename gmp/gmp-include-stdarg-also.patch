@@ -1,0 +1,12 @@
+diff --git a/gmp-h.in b/gmp-h1.in
+index d8ce7fd..6a7b10b 100644
+--- a/gmp-h.in
++++ b/gmp-h.in
+@@ -54,6 +54,7 @@ see https://www.gnu.org/licenses/.  */
+ 
+ #include <stddef.h>    /* for size_t */
+ #include <limits.h>
++#include <stdarg.h>
+ 
+ /* Instantiated by configure. */
+ #if ! defined (__GMP_WITHIN_CONFIGURE)
