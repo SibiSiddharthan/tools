@@ -1,0 +1,3 @@
+## DEPENDS
+* GMP
+* MPFR

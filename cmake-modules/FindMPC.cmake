@@ -1,0 +1,21 @@
+find_path(MPC_INCLUDE_DIR NAMES mpc.h)
+find_library(MPC_LIBRARY NAMES mpc libmpc NAMES_PER_DIR)
+
+include(FindPackageHandleStandardArgs)
+find_package_handle_standard_args(MPC REQUIRED_VARS MPC_INCLUDE_DIR MPC_LIBRARY)
+
+#depends on GMP, MPFR
+find_package(GMP REQUIRED)
+find_package(MPFR REQUIRED)
+
+if(MPC_FOUND)
+  set(MPC_INCLUDE_DIRS ${MPC_INCLUDE_DIR})
+  set(MPC_LIBRARIES ${MPC_LIBRARY})
+  if(NOT TARGET MPC::MPC)
+	add_library(MPC::MPC UNKNOWN IMPORTED)
+	set_target_properties(MPC::MPC PROPERTIES
+		INTERFACE_INCLUDE_DIRECTORIES ${MPC_INCLUDE_DIRS}
+		INTERFACE_LINK_LIBRARIES ${MPC_LIBRARIES}
+		IMPORTED_LOCATION ${MPC_LIBRARIES})
+  endif()
+endif()
