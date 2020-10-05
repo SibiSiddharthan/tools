@@ -1,6 +1,0 @@
-#ifndef COMPAT_UNISTD_H
-#define COMPAT_UNISTD_H
-
-#include <io.h>
-#include <process.h>
-#endif

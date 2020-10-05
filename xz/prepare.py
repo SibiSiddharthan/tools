@@ -18,7 +18,7 @@ if not os.path.isdir(directory):
 if os.path.isdir(directory):
 	shutil.copyfile("CMakeLists.txt","{}/CMakeLists.txt".format(directory))
 	shutil.copyfile("xz-config.h.in","{}/xz-config.h.in".format(directory))
-	shutil.copyfile("unistd.h.in","{}/unistd.h.in".format(directory))
+	shutil.copyfile("../support/unistd.h.in","{}/unistd.h.in".format(directory))
 	shutil.copyfile("sys_time.h.in","{}/sys_time.h.in".format(directory))
 	shutil.copyfile("gettimeofday.c","{}/lib/gettimeofday.c".format(directory))
 	os.makedirs("{}/cmake-modules".format(directory),exist_ok=True)

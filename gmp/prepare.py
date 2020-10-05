@@ -18,9 +18,9 @@ if not os.path.isdir(directory):
 if os.path.isdir(directory):
 	shutil.copyfile("CMakeLists.txt","{}/CMakeLists.txt".format(directory))
 	shutil.copyfile("gmp-config.h.in","{}/gmp-config.h.in".format(directory))
-	shutil.copyfile("unistd.h.in","{}/unistd.h.in".format(directory))
 	shutil.copyfile("m4-config.in","{}/m4-config.in".format(directory))
 	os.makedirs("{}/cmake-modules".format(directory),exist_ok=True)
+	shutil.copyfile("../support/unistd.h.in","{}/unistd.h.in".format(directory))
 	shutil.copyfile("../cmake-modules/UtilityFunctions.cmake","{}/cmake-modules/UtilityFunctions.cmake".format(directory))
 	shutil.copyfile("../cmake-modules/inline.cmake","{}/cmake-modules/inline.cmake".format(directory))
 	shutil.copyfile("../cmake-modules/restrict.cmake","{}/cmake-modules/restrict.cmake".format(directory))
