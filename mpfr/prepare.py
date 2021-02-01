@@ -1,3 +1,10 @@
+'''
+   Copyright (c) 2020-2021 Sibi Siddharthan
+
+   Distributed under the MIT license.
+   Refer to the LICENSE file at the root directory for details.
+'''
+
 import urllib.request 
 import os
 import tarfile
@@ -24,4 +31,3 @@ if os.path.isdir(directory):
 	shutil.copyfile("endianess-check.cmake","{}/cmake-modules/endianess-check.cmake".format(directory))
 	shutil.copyfile("printf-check.cmake","{}/cmake-modules/printf-check.cmake".format(directory))
 	shutil.copyfile("../cmake-modules/TimeWithSysTime.cmake","{}/cmake-modules/TimeWithSysTime.cmake".format(directory))
-

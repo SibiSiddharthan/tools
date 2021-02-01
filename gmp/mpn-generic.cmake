@@ -1,3 +1,10 @@
+#[[
+   Copyright (c) 2020-2021 Sibi Siddharthan
+
+   Distributed under the MIT license.
+   Refer to the LICENSE file at the root directory for details.
+]]
+
 set(mpn_GSOURCES
 add.c div_qr_2u_pi1.c matrix22_mul.c redc_2.c toom_couple_handling.c
 add_1.c dive_1.c matrix22_mul1_inverse_vector.c redc_n.c toom_eval_dgr3_pm1.c

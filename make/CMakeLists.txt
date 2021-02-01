@@ -1,8 +1,14 @@
+#[[
+   Copyright (c) 2020-2021 Sibi Siddharthan
+
+   Distributed under the MIT license.
+   Refer to the LICENSE file at the root directory for details.
+]]
+
 cmake_minimum_required(VERSION 3.13)
 project(make 
 		VERSION 4.2.1
 		LANGUAGES C)
-
 
 set(PACKAGE \"make\")
 set(PACKAGE_BUGREPORT \"bug-make@gnu.org\")
@@ -364,4 +370,3 @@ add_custom_target(check
 		WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/tests
 		USES_TERMINAL)
 endif()
-

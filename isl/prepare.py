@@ -1,3 +1,10 @@
+'''
+   Copyright (c) 2020-2021 Sibi Siddharthan
+
+   Distributed under the MIT license.
+   Refer to the LICENSE file at the root directory for details.
+'''
+
 import urllib.request 
 import os
 import tarfile
@@ -21,4 +28,3 @@ if os.path.isdir(directory):
 	os.makedirs("{}/cmake-modules".format(directory),exist_ok=True)
 	shutil.copyfile("../cmake-modules/UtilityFunctions.cmake","{}/cmake-modules/UtilityFunctions.cmake".format(directory))
 	shutil.copyfile("../cmake-modules/FindGMP.cmake","{}/cmake-modules/FindGMP.cmake".format(directory))
-

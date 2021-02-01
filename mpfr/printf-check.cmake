@@ -1,5 +1,13 @@
+#[[
+   Copyright (c) 2020-2021 Sibi Siddharthan
+
+   Distributed under the MIT license.
+   Refer to the LICENSE file at the root directory for details.
+]]
+
 set(CMAKE_REQUIRED_LIBRARIES ${GMP_LIBRARIES})
 set(CMAKE_REQUIRED_INCLUDES ${GMP_INCLUDE_DIRS})
+include(CheckCSourceRuns)
 
 check_c_source_runs("
 #include <stdio.h>

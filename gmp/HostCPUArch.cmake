@@ -1,3 +1,10 @@
+#[[
+   Copyright (c) 2020-2021 Sibi Siddharthan
+
+   Distributed under the MIT license.
+   Refer to the LICENSE file at the root directory for details.
+]]
+
 if(NOT DEFINED HOST_ARCHITECTURE)
 	message("NOTE: HOST_ARCHITECTURE not set. Defaulting to x86_64
 			Supported host architectures are x86_64, core2, nehalem, westmere,

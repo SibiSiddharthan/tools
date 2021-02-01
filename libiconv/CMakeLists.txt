@@ -1,8 +1,14 @@
+#[[
+   Copyright (c) 2020-2021 Sibi Siddharthan
+
+   Distributed under the MIT license.
+   Refer to the LICENSE file at the root directory for details.
+]]
+
 cmake_minimum_required(VERSION 3.13)
 project(libiconv
 		VERSION 1.16
 		LANGUAGES C)
-
 
 option(BUILD_SHARED_LIBS "Build Shared Library" ON)
 add_compile_definitions(HAVE_CONFIG_H)
@@ -146,4 +152,3 @@ file(GLOB man_html "man/*3.html")
 install(FILES ${man_html} DESTINATION share/doc)
 set(man3_files man/iconv.3 man/iconv_close.3 man/iconv_open.3 man/iconv_open_into.3 man/iconvctl.3)
 install(FILES ${man3_files} DESTINATION share/man/man3)
-
