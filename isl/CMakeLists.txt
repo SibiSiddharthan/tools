@@ -26,6 +26,7 @@ add_compile_definitions(HAVE_CONFIG_H)
 
 if(WIN32)
 	add_compile_definitions(_CRT_SECURE_NO_WARNINGS _CRT_NONSTDC_NO_DEPRECATE)
+	set(BUILD_SHARED_LIBS OFF) # Currently unsupported
 endif()
 
 set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake-modules)
@@ -56,7 +57,7 @@ if(${CMAKE_C_COMPILER_ID} STREQUAL "GNU" OR ${CMAKE_C_COMPILER_ID} STREQUAL "Cla
 	set(HAVE_DECL___BUILTIN_FFS 1)
 endif()
 
-check_types(char int long short "void *" )
+check_types(char int long short "void *")
 
 set(CMAKE_REQUIRED_INCLUDES ${GMP_INCLUDE_DIRS})
 set(CMAKE_REQUIRED_LIBRARIES ${GMP_LIBRARIES})
@@ -331,26 +332,22 @@ endif()
 
 file(WRITE ${CMAKE_CURRENT_BINARY_DIR}/gitversion.h "#define GIT_HEAD_ID \"isl-${PROJECT_VERSION}\"")
 file(WRITE ${CMAKE_CURRENT_BINARY_DIR}/isl/stdint.h 
-	"#ifndef _ISL_INCLUDE_ISL_STDINT_H
-	#define _ISL_INCLUDE_ISL_STDINT_H 1
-	#ifndef _GENERATED_STDINT_H
-	#define _GENERATED_STDINT_H \"isl ${PROJECT_VERSION}\"
-	#define _STDINT_HAVE_STDINT_H 1
-	#include <stdint.h>
-	#endif
-	#endif")
+"#ifndef _ISL_INCLUDE_ISL_STDINT_H
+#define _ISL_INCLUDE_ISL_STDINT_H 1
+#ifndef _GENERATED_STDINT_H
+#define _GENERATED_STDINT_H \"isl ${PROJECT_VERSION}\"
+#define _STDINT_HAVE_STDINT_H 1
+#include <stdint.h>
+#endif
+#endif")
 
-add_library(isl_O OBJECT ${isl_SOURCES})
-target_compile_options(isl_O PUBLIC -fomit-frame-pointer -malign-double -fstrict-aliasing -ffast-math)
-target_include_directories(isl_O PUBLIC include ${CMAKE_CURRENT_SOURCE_DIR} ${CMAKE_CURRENT_BINARY_DIR})
-if(USE_GMP_FOR_MP)
-	target_link_libraries(isl_O GMP::GMP)
-endif()
-
-#prevent repeated compilation
-add_library(isl isl-dll.def)
+add_library(isl ${isl_SOURCES})
+target_compile_options(isl PUBLIC -fomit-frame-pointer -malign-double -fstrict-aliasing -ffast-math)
+target_include_directories(isl PUBLIC include ${CMAKE_CURRENT_SOURCE_DIR} ${CMAKE_CURRENT_BINARY_DIR})
 set_target_properties(isl PROPERTIES PUBLIC_HEADER "${isl_HEADERS}")
-target_link_libraries(isl isl_O)
+if(USE_GMP_FOR_MP)
+	target_link_libraries(isl GMP::GMP)
+endif()
 if(BUILD_SHARED_LIBS)
 	set_target_properties(isl PROPERTIES RUNTIME_OUTPUT_NAME "isl-${PROJECT_VERSION}"
 			RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/tests)
@@ -365,15 +362,6 @@ install(FILES doc/manual.pdf DESTINATION share/doc/isl)
 
 include(CTest)
 if(BUILD_TESTING)
-
-if(WIN32 AND BUILD_SHARED_LIBS)
-	add_library(isl_for_test STATIC)
-	target_link_libraries(isl_for_test isl_O)
-	set(isl_test_link isl_for_test)
-else()
-	set(isl_test_link isl)
-endif()
-
 
 set(EXEEXT ${CMAKE_EXECUTABLE_SUFFIX})
 set(srcdir ${CMAKE_CURRENT_SOURCE_DIR})
@@ -404,14 +392,14 @@ set(test_helpers_2
 
 foreach(i ${test_helpers_1})
 	add_executable(${i} ${i}.c)
-	target_link_libraries(${i} ${isl_test_link})
+	target_link_libraries(${i} isl)
 	set_target_properties(${i} PROPERTIES
 							RUNTIME_OUTPUT_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}/tests")
 endforeach()
 
 foreach(i ${test_helpers_2})
 	add_executable(isl_${i} ${i}.c)
-	target_link_libraries(isl_${i} ${isl_test_link})
+	target_link_libraries(isl_${i} isl)
 	set_target_properties(isl_${i} PROPERTIES
 							RUNTIME_OUTPUT_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}/tests")
 endforeach()
@@ -431,6 +419,5 @@ add_test(NAME flow-test COMMAND sh ${CMAKE_CURRENT_BINARY_DIR}/tests/flow_test.s
 		WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/tests)
 add_test(NAME schedule-test COMMAND sh ${CMAKE_CURRENT_BINARY_DIR}/tests/schedule_test.sh
 		WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/tests)
-
 
 endif()
