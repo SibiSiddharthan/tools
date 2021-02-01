@@ -1,27 +1,36 @@
+/*
+   Copyright (c) 2020-2021 Sibi Siddharthan
+
+   Distributed under the MIT license.
+   Refer to the LICENSE file at the root directory for details.
+*/
+
 #include <sys/time.h>
 #define WIN32_LEAN_AND_MEAN
 #include <Windows.h>
-#include <stdint.h>
+#include <errno.h>
+#include <time.h>
 
-//Got this from git port of Windows
+/* 116444736000000000 is the number of 100 nanosecond intervals from
+   January 1st 1601 to January 1st 1970 (UTC)
+*/
 
-int gettimeofday(struct timeval * tp, void *restrict tz)
+int gettimeofday(struct timeval *tp, void *tz /*unused*/)
 {
-    // Note: some broken versions only have 8 trailing zero's, the correct epoch has 9 trailing zero's
-    // This magic number is the number of 100 nanosecond intervals since January 1, 1601 (UTC)
-    // until 00:00:00 January 1, 1970 
-    static const uint64_t EPOCH = ((uint64_t) 116444736000000000ULL);
+	if (tp == NULL)
+	{
+		errno = EINVAL;
+		return -1;
+	}
 
-    SYSTEMTIME  system_time;
-    FILETIME    file_time;
-    uint64_t    time;
+	SYSTEMTIME systemtime;
+	FILETIME filetime;
+	GetSystemTime(&systemtime);
+	SystemTimeToFileTime(&systemtime, &filetime);
+	time_t epoch = ((time_t)filetime.dwHighDateTime << 32) + filetime.dwLowDateTime;
+	epoch -= 116444736000000000LL;
+	tp->tv_sec = epoch / 10000000;
+	tp->tv_usec = (epoch % 10000000) / 10;
 
-    GetSystemTime( &system_time );
-    SystemTimeToFileTime( &system_time, &file_time );
-    time =  ((uint64_t)file_time.dwLowDateTime )      ;
-    time += ((uint64_t)file_time.dwHighDateTime) << 32;
-
-    tp->tv_sec  = (long) ((time - EPOCH) / 10000000L);
-    tp->tv_usec = (long) (system_time.wMilliseconds * 1000);
-    return 0;
+	return 0;
 }
